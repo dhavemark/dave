@@ -1,0 +1,92 @@
+body.light-mode {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+body.night-mode {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+.navbar-light {
+  background-color: #f8f9fa;
+  box-shadow: 1px 5px 5px lightblue;
+}
+
+.night-mode .navbar {
+  background-color: #343a40;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.night-mode .card-body {
+  background-color: rgba(33, 37, 41, 0.9);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+p,
+li {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.night-mode .navbar-brand,
+.night-mode .btn-outline-dark {
+  color: #0f0f0f !important;
+}
+
+.night-mode,
+.btn-outline-dark:hover {
+  color: #ffffff !important;
+}
+
+.night-mode p,
+.night-mode li,
+.night-mode h1,
+.night-mode h2,
+.night-mode h3 {
+  color: #f8f9fa;
+}
+
+.footer {
+  background: linear-gradient(to right, #212529, #212529);
+  color: rgb(180, 180, 180);
+
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  border-top: 1px solid #444;
+}
+
+.text-light {
+  color: rgba(255, 255, 255, 0.7);
+}
+#about-section {
+  margin-top: 170px;
+}
