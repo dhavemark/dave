@@ -26,15 +26,13 @@ const amplitudeSequence = [+3, -2, +1, -4];
 function encrypt() {
   const plaintext = document.getElementById("plaintext").value.toUpperCase();
   const encryptedText = processText(plaintext, "encrypt");
-  document.getElementById(
-    "output"
-  ).textContent = `Ciphertext: ${encryptedText}`;
+  document.getElementById("output").textContent = `${encryptedText}`;
 }
 
 function decrypt() {
   const ciphertext = document.getElementById("ciphertext").value.toUpperCase();
   const decryptedText = processText(ciphertext, "decrypt");
-  document.getElementById("output").textContent = `Plaintext: ${decryptedText}`;
+  document.getElementById("output").textContent = `${decryptedText}`;
 }
 
 function processText(text, mode) {
@@ -70,16 +68,41 @@ function startVoiceCommand() {
 
   recognition.onresult = function (event) {
     const command = event.results[0][0].transcript.toLowerCase();
+
     if (command.includes("encrypt")) {
       encrypt();
     } else if (command.includes("decrypt")) {
       decrypt();
     } else {
-      alert("Unrecognized command. Please say 'encrypt' or 'decrypt'.");
+      document.getElementById("plaintext").value = command;
     }
   };
 
   recognition.onerror = function (event) {
     alert("Voice command error: " + event.error);
   };
+}
+function copyToClipboard() {
+  const output = document.getElementById("output");
+  const text = output.textContent || output.innerText;
+
+  if (navigator.clipboard) {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        alert("Copied to clipboard!");
+      })
+      .catch((err) => {
+        alert("Failed to copy: " + err);
+      });
+  } else {
+    // Fallback for browsers without clipboard API support
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+    alert("Copied to clipboard!");
+  }
 }

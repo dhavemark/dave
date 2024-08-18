@@ -97,9 +97,18 @@ li {
   color: #ffffff;
   padding: 20px;
   border-radius: 5px;
-  text-align: center;
   font-size: 1.5rem;
 }
+.output-text {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.output-text button {
+  margin-left: 50px;
+}
+
 .form-label {
   font-weight: bold;
 }
