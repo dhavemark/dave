@@ -5,19 +5,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (localStorage.getItem("nightMode") === "true") {
     body.classList.add("night-mode");
-    toggleButton.innerHTML = '<i class="bi bi-cloud-sun-fill"></i>  Light Mode';
+    toggleButton.innerHTML = '<i class="bi bi-cloud-sun-fill"></i>  ';
   }
 
   toggleButton.addEventListener("click", function () {
     body.classList.toggle("night-mode");
 
     if (body.classList.contains("night-mode")) {
-      toggleButton.innerHTML =
-        '<i class="bi bi-cloud-sun-fill"></i> Light Mode';
+      toggleButton.innerHTML = '<i class="bi bi-cloud-sun-fill"></i>  ';
       localStorage.setItem("nightMode", "true");
     } else {
-      toggleButton.innerHTML =
-        '<i class="bi bi-moon-stars-fill"></i> Night Mode';
+      toggleButton.innerHTML = '<i class="bi bi-moon-stars-fill"></i>  ';
       localStorage.setItem("nightMode", "false");
     }
   });
@@ -59,4 +57,29 @@ function processText(text, mode) {
     }
   }
   return result;
+}
+
+function startVoiceCommand() {
+  const recognition = new (window.SpeechRecognition ||
+    window.webkitSpeechRecognition)();
+  recognition.lang = "en-US";
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  recognition.start();
+
+  recognition.onresult = function (event) {
+    const command = event.results[0][0].transcript.toLowerCase();
+    if (command.includes("encrypt")) {
+      encrypt();
+    } else if (command.includes("decrypt")) {
+      decrypt();
+    } else {
+      alert("Unrecognized command. Please say 'encrypt' or 'decrypt'.");
+    }
+  };
+
+  recognition.onerror = function (event) {
+    alert("Voice command error: " + event.error);
+  };
 }

@@ -87,6 +87,23 @@ li {
 .text-light {
   color: rgba(255, 255, 255, 0.7);
 }
+
 #about-section {
   margin-top: 170px;
+}
+
+.output-box {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.form-label {
+  font-weight: bold;
+}
+.btn-primary,
+.btn-outline-dark {
+  border-radius: 30px;
 }
