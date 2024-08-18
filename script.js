@@ -5,17 +5,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (localStorage.getItem("nightMode") === "true") {
     body.classList.add("night-mode");
-    toggleButton.innerHTML = '<i class="bi bi-cloud-sun-fill"></i>  ';
+    toggleButton.innerHTML = '<i class="bi bi-cloud-sun-fill"></i> Light  ';
   }
 
   toggleButton.addEventListener("click", function () {
     body.classList.toggle("night-mode");
 
     if (body.classList.contains("night-mode")) {
-      toggleButton.innerHTML = '<i class="bi bi-cloud-sun-fill"></i>  ';
+      toggleButton.innerHTML = '<i class="bi bi-cloud-sun-fill"></i> Light  ';
       localStorage.setItem("nightMode", "true");
     } else {
-      toggleButton.innerHTML = '<i class="bi bi-moon-stars-fill"></i>  ';
+      toggleButton.innerHTML = '<i class="bi bi-moon-stars-fill"></i> Night  ';
       localStorage.setItem("nightMode", "false");
     }
   });
