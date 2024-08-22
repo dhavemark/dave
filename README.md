@@ -1,4 +1,4 @@
-##About AlphaWave Cipher
+#About AlphaWave Cipher
 A Unique Dynamic Wave Pattern Cipher
 
 Concept
