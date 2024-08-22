@@ -1,3 +1,19 @@
+// Add this before your encrypt() and decrypt() functions
+document.querySelectorAll(".btn").forEach((button) => {
+  button.addEventListener("click", function (event) {
+    const formControls = button
+      .closest(".col-md-6")
+      .querySelectorAll(".form-control");
+    formControls.forEach((input) => {
+      if (!input.checkValidity()) {
+        input.classList.add("is-invalid");
+      } else {
+        input.classList.remove("is-invalid");
+      }
+    });
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const toggleButton = document.getElementById("mode-toggle");
   const body = document.body;
@@ -82,27 +98,29 @@ function startVoiceCommand() {
     alert("Voice command error: " + event.error);
   };
 }
-function copyToClipboard() {
-  const output = document.getElementById("output");
-  const text = output.textContent || output.innerText;
 
-  if (navigator.clipboard) {
-    navigator.clipboard
-      .writeText(text)
-      .then(() => {
-        alert("Copied to clipboard!");
-      })
-      .catch((err) => {
-        alert("Failed to copy: " + err);
-      });
-  } else {
-    // Fallback for browsers without clipboard API support
-    const textArea = document.createElement("textarea");
-    textArea.value = text;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textArea);
-    alert("Copied to clipboard!");
-  }
+function copyToClipboard() {
+  // Get the text content from the output div
+  const outputText = document.getElementById("output").innerText;
+
+  // Create a temporary textarea element to hold the text to be copied
+  const tempTextarea = document.createElement("textarea");
+  tempTextarea.value = outputText;
+  document.body.appendChild(tempTextarea);
+
+  // Select the text and copy it to the clipboard
+  tempTextarea.select();
+  document.execCommand("copy");
+
+  // Remove the temporary textarea element
+  document.body.removeChild(tempTextarea);
+
+  // Change the button text and icon to show "Copied"
+  const copyButton = document.getElementById("copyButton");
+  copyButton.innerHTML = '<i class="bi bi-check me-1"></i>Copied!';
+
+  // Reset the button text and icon after a short delay (e.g., 2 seconds)
+  setTimeout(() => {
+    copyButton.innerHTML = '<i class="bi bi-copy me-1"></i>Copy';
+  }, 1000);
 }
