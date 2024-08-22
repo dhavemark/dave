@@ -1,4 +1,5 @@
-<div style="padding-top: 100%;"><img class="media-op-image" src="https://i.gifer.com/NTHO.gif" role="presentation" alt="Animated GIF loop, fractal, black and white, share or download. Seamless, grid, glow, motiongraphics, xponentialdesign, after effects, trapcode, seamless, " style="z-index: 1;"><div class="media-container1"><div class="media-container2" style="width: 500px;"><div><video poster="https://i.gifer.com/fetch/w300-preview/68/688bb370143355b5d62e0fb4ac7743f2.gif" class="full-media" loop="" autoplay="" playsinline=""><source src="https://i.gifer.com/NTHO.mp4" type="video/mp4"></video></div></div></div></div>
+<img itemprop="contentURL" width="1200" height="810" src="https://i.gifer.com/embedded/download/3edZ.gif" referrerpolicy="no-referrer" data-src="https://i.gifer.com/embedded/download/3edZ.gif" alt="processing,waves,proce55ing,create365,creative code" onerror="this.onerror=null;this.src='/images/nopic.jpg';">
+
 <h1>About AlphaWave Cipher</h1>
 <h6 align="left">A Unique Dynamic Wave Pattern Cipher</h6>
 </br></br>
