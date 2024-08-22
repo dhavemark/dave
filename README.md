@@ -1,8 +1,8 @@
-<img itemprop="contentURL" width="1200" height="810" src="https://i.gifer.com/embedded/download/3edZ.gif" referrerpolicy="no-referrer" data-src="https://i.gifer.com/embedded/download/3edZ.gif" alt="processing,waves,proce55ing,create365,creative code" onerror="this.onerror=null;this.src='/images/nopic.jpg';">
+ 
 
 <h1>About AlphaWave Cipher</h1>
 <h6 align="left">A Unique Dynamic Wave Pattern Cipher</h6>
-</br></br>
+</br>
 <h1 align="left">Concept</h1> 
 <p align="left">The AlphaWave Cipher is a substitution cipher that uses the positional properties of letters in the alphabet to create a dynamic wave pattern for encryption.</p>
 
