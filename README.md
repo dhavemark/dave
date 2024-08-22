@@ -1,4 +1,4 @@
-<img src="https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftwxlvixc93j8vmm4zp53.gif" alt="Cat Typing GIF" loading="lazy" width="500" height="343" data-animated="true" id="animated-0" class="ff-image">
+<img src="https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftwxlvixc93j8vmm4zp53.gif" alt="Cat Typing GIF" loading="lazy" width="500" height="343" data-animated="true" id="animated-10" class="ff-image">
 
 <h1>About AlphaWave Cipher</h1>
 <h6 align="left">A Unique Dynamic Wave Pattern Cipher</h6>
