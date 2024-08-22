@@ -1,7 +1,4 @@
- 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=nicolaaaaaaass&label=Profile%20views&color=0e75b6&style=flat" alt="nicolaaaaaaass" /> </p>
-<img src="https://media.tenor.com/lDP4QgUYoDkAAAAi/minecraft.gif" width="270" height="309" alt="Minecraft Sticker - Minecraft Stickers" style="max-width: 525px; background-color: unset;"> 
-
+<div style="padding-top: 100%;"><img class="media-op-image" src="https://i.gifer.com/NTHO.gif" role="presentation" alt="Animated GIF loop, fractal, black and white, share or download. Seamless, grid, glow, motiongraphics, xponentialdesign, after effects, trapcode, seamless, " style="z-index: 1;"><div class="media-container1"><div class="media-container2" style="width: 500px;"><div><video poster="https://i.gifer.com/fetch/w300-preview/68/688bb370143355b5d62e0fb4ac7743f2.gif" class="full-media" loop="" autoplay="" playsinline=""><source src="https://i.gifer.com/NTHO.mp4" type="video/mp4"></video></div></div></div></div>
 <h1>About AlphaWave Cipher</h1>
 <h6 align="left">A Unique Dynamic Wave Pattern Cipher</h6>
 </br></br>
