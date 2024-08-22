@@ -1,14 +1,10 @@
- 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=nicolaaaaaaass&label=Profile%20views&color=0e75b6&style=flat" alt="nicolaaaaaaass" /> </p>
-<img src="https://media.tenor.com/lDP4QgUYoDkAAAAi/minecraft.gif" width="270" height="309" alt="Minecraft Sticker - Minecraft Stickers" style="max-width: 525px; background-color: unset;"> 
-
+<img src="https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftwxlvixc93j8vmm4zp53.gif" alt="Cat Typing GIF" loading="lazy" width="500" height="343" data-animated="true" id="animated-10" class="ff-image">
 
 <h1>About AlphaWave Cipher</h1>
- 
 <h6 align="left">A Unique Dynamic Wave Pattern Cipher</h6>
-
-<h6 align="left">Concept<h6 align="left">
-The AlphaWave Cipher is a substitution cipher that uses the positional properties of letters in the alphabet to create a dynamic wave pattern for encryption...
+</br>
+<h1 align="left">Concept</h1> 
+<p align="left">The AlphaWave Cipher is a substitution cipher that uses the positional properties of letters in the alphabet to create a dynamic wave pattern for encryption.</p>
 
 <p align="left">Encryption Process</p><br/>
 <p align="left">
