@@ -4,7 +4,7 @@
 
 
 <h1>About AlphaWave Cipher</h1>
-<h2 align="left">A Unique Dynamic Wave Pattern Cipher</h2>
+<h6 align="left">A Unique Dynamic Wave Pattern Cipher</h6>
 </br></br>
 <h1 align="left">Concept</h1> 
 <p align="left">The AlphaWave Cipher is a substitution cipher that uses the positional properties of letters in the alphabet to create a dynamic wave pattern for encryption.</p>
