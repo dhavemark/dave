@@ -1,4 +1,9 @@
-#About AlphaWave Cipher
+ 
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=nicolaaaaaaass&label=Profile%20views&color=0e75b6&style=flat" alt="nicolaaaaaaass" /> </p>
+<img src="https://media.tenor.com/lDP4QgUYoDkAAAAi/minecraft.gif" width="270" height="309" alt="Minecraft Sticker - Minecraft Stickers" style="max-width: 525px; background-color: unset;"> 
+
+
+<h1>About AlphaWave Cipher</h1>
 A Unique Dynamic Wave Pattern Cipher
 
 Concept
