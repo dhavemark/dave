@@ -34,8 +34,13 @@ Decryption Process
 The decryption process is the reverse of encryption, using the same amplitude sequence to shift the letters back to their original positions.
 <p align="left">
 Unique Features
-Dynamic and Repeating Pattern: The use of a repeating amplitude sequence adds complexity and ensures the same letter can be encoded differently depending on its position.
-Customizable Rules: The amplitude sequence can be customized or altered mid-message for added security.
-Positional Sensitivity: The cipher is sensitive to the position of each letter, creating a non-linear and dynamic encryption pattern.
-This cipher can be further expanded by incorporating multiple amplitude sequences, varying wrap-around rules, or even combining with other cipher techniques for enhanced security.
-</p>
+ </p>
+ <p align="left">
+Dynamic and Repeating Pattern: The use of a repeating amplitude sequence adds complexity and ensures the same letter can be encoded differently depending on its position.</p>
+<p align="left">
+Customizable Rules: The amplitude sequence can be customized or altered mid-message for added security.</p>
+<p align="left">
+Positional Sensitivity: The cipher is sensitive to the position of each letter, creating a non-linear and dynamic encryption pattern.</p>
+<p align="left">
+This cipher can be further expanded by incorporating multiple amplitude sequences, varying wrap-around rules, or even combining with other cipher techniques for enhanced security. </p>
+
