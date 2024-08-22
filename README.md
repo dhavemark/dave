@@ -1,4 +1,4 @@
- 
+ <video poster="https://i.gifer.com/fetch/w300-preview/91/9159b2f608c6685c6b3e0d20cfe388fb.gif" class="full-media" loop="" autoplay="" playsinline=""><source src="https://i.gifer.com/WTDd.mp4" type="video/mp4"></video>
 
 <h1>About AlphaWave Cipher</h1>
 <h6 align="left">A Unique Dynamic Wave Pattern Cipher</h6>
