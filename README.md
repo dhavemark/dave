@@ -15,7 +15,7 @@ The AlphaWave Cipher is a substitution cipher that uses the positional propertie
 Wave Amplitude Setup: The cipher begins with a predefined amplitude sequence, such as +3, -2, +1, -4, and repeats it for the length of the message</p>
 <p align="left">
 Letter Positioning: Each letter in the plaintext is assigned a number according to its position in the alphabet (A=1, B=2, C=3, ..., Z=26)</p>
-<<p align="left">
+<p align="left">
 Shifting Process: The letter is shifted according to the wave amplitude corresponding to its position in the message.</p>
 <p align="left">
 Dynamic Adjustment: After each letter is encrypted, the amplitude can be adjusted based on a rule, adding an additional layer of complexity.</p>
