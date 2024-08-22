@@ -1,8 +1,12 @@
  
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=nicolaaaaaaass&label=Profile%20views&color=0e75b6&style=flat" alt="nicolaaaaaaass" /> </p>
 <img src="https://media.tenor.com/lDP4QgUYoDkAAAAi/minecraft.gif" width="270" height="309" alt="Minecraft Sticker - Minecraft Stickers" style="max-width: 525px; background-color: unset;"> 
-
-
+    <div class="mt-5">
+      <marquee direction="rights"
+        ><h1>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</h1></marquee
+      >
+    </div>
+</br></br>
 <h1>About AlphaWave Cipher</h1>
 <h6 align="left">A Unique Dynamic Wave Pattern Cipher</h6>
 </br></br>
