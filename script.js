@@ -124,3 +124,8 @@ function copyToClipboard() {
     copyButton.innerHTML = '<i class="bi bi-copy me-1"></i>Copy';
   }, 1000);
 }
+
+// OUTPUT REFRSHER
+function refreshOutput() {
+  document.getElementById("output").innerHTML = "Your result will appear here";
+}

@@ -16,8 +16,11 @@ body.night-mode {
     background-color: #f8f9fa;
     color: #212529;
   }
+  .btn-dark:hover {
+    background-color: #6c757d;
+    color: #f8f9fa;
+  }
 }
-
 /* .navbar-light {
   background-color: #f8f9fa;
   box-shadow: 1px 5px 5px lightblue;
