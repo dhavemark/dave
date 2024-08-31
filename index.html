@@ -17,472 +17,257 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <img
-          src="./assets/cipher-logo.png"
-          width="40"
-          alt="Logo"
-          class="me-2 d-none d-lg-block"
-        />
-        <a class="navbar-brand" href="#">AlphaWave Cipher</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="btn btn-outline-dark ms-3" href="#about-section">
-                <i class="bi bi-info-circle-fill me-1"></i>About
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-dark ms-3" href="#pattern-section">
-                <i class="bi bi-grid-1x2-fill me-1"></i>Pattern
-              </a>
-            </li>
-            <li class="nav-item">
-              <button class="btn btn-outline-dark ms-3" id="mode-toggle">
-                <i class="bi bi-moon-stars-fill me-1"></i>Night
-              </button>
-            </li>
-            <li class="nav-item">
-              <button
-                class="btn btn-outline-dark ms-3"
-                onclick="startVoiceCommand()"
-              >
-                <i class="bi bi-mic-fill"></i> Voice
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="container mt-5">
-      <h1 class="text-center">AlphaWave Cipher</h1>
-      <p class="lead text-center">
-        Encrypt and Decrypt Messages Using a Dynamic Wave Pattern
-      </p>
-      <div class="row mt-4">
-        <div class="col-md-6 mb-3 mb-md-0">
-          <div class="mb-3">
-            <label for="plaintext" class="form-label">Plaintext</label>
-            <input
-              type="text"
-              class="form-control form-control-lg"
-              id="plaintext"
-              placeholder="Enter text to encrypt"
-              required
-            />
-            <div class="invalid-feedback">
-              Please enter some text to encrypt.
-            </div>
-          </div>
-          <button class="col-5 btn btn-primary" onclick="encrypt()">
-            Encrypt
-          </button>
-        </div>
-        <div class="col-md-6 mt-3 mt-md-0">
-          <div class="mb-3">
-            <label for="ciphertext" class="form-label">Ciphertext</label>
-            <input
-              type="text"
-              class="form-control form-control-lg"
-              id="ciphertext"
-              placeholder="Enter text to decrypt"
-              required
-            />
-            <div class="invalid-feedback">
-              Please enter some text to decrypt.
-            </div>
-          </div>
-          <button class="col-5 btn btn-primary" onclick="decrypt()">
-            Decrypt
-          </button>
-        </div>
-      </div>
-
-      <div class="mt-5">
-        <h3>Output</h3>
-        <div
-          class="output-box d-flex justify-content-between align-items-center"
-        >
-          <div id="output" class="output-text">
-            Your result will appear here
-          </div>
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <img
+            src="./assets/cipher-logo.png"
+            width="40"
+            alt="Logo"
+            class="me-2 d-none d-lg-block"
+          />
+          <a class="navbar-brand" href="#">AlphaWave Cipher</a>
           <button
-            id="copyButton"
-            class="btn btn-outline-secondary ms-3"
-            onclick="copyToClipboard()"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            <i class="bi bi-copy me-1"></i>Copy
+            <span class="navbar-toggler-icon"></span>
           </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="btn btn-outline-dark ms-3" href="#about-section">
+                  <i class="bi bi-info-circle-fill me-1"></i>About
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <button
+                  class="btn btn-outline-dark ms-3"
+                  onclick="startVoiceCommand()"
+                >
+                  <i class="bi bi-mic-fill me-1"></i>Voice
+                </button>
+              </li>
+              <!-- Dark -->
+              <li class="nav-item">
+                <button
+                  title="Light and Dark  "
+                  class="btn btn-outline-dark ms-3"
+                  id="mode-toggle"
+                >
+                  <i class="bi bi-moon-stars-fill"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </div>
+      </nav>
 
-    <!-- About Section -->
-    <div id="about-section" class="container">
-      <br />
-      <br />
-      <div class="container">
-        <h1 class="text-center">About AlphaWave Cipher</h1>
-        <p class="lead text-center">A Unique Dynamic Wave Pattern Cipher</p>
-
+      <div class="container mt-5">
+        <h1 class="text-center">AlphaWave Cipher</h1>
+        <p class="lead text-center">
+          Encrypt and Decrypt Messages Using a Dynamic Wave Pattern
+        </p>
         <div class="row mt-4">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-body">
-                <h2>Concept</h2>
-                <p>
-                  The AlphaWave Cipher is a substitution cipher that uses the
-                  positional properties of letters in the alphabet to create a
-                  dynamic wave pattern for encryption...
-                </p>
-
-                <h3>Encryption Process</h3>
-                <ul>
-                  <li>
-                    <strong>Wave Amplitude Setup:</strong> The cipher begins
-                    with a predefined amplitude sequence, such as +3, -2, +1,
-                    -4, and repeats it for the length of the message...
-                  </li>
-                  <li>
-                    <strong>Letter Positioning:</strong> Each letter in the
-                    plaintext is assigned a number according to its position in
-                    the alphabet (A=1, B=2, C=3, ..., Z=26)...
-                  </li>
-                  <li>
-                    <strong>Shifting Process:</strong> The letter is shifted
-                    according to the wave amplitude corresponding to its
-                    position in the message...
-                  </li>
-                  <li>
-                    <strong>Dynamic Adjustment:</strong> After each letter is
-                    encrypted, the amplitude can be adjusted based on a rule,
-                    adding an additional layer of complexity...
-                  </li>
-                  <li>
-                    <strong>Repetition of Amplitude:</strong> The amplitude
-                    pattern repeats throughout the message, creating a wave-like
-                    effect that ensures no two identical letters are encrypted
-                    the same way...
-                  </li>
-                </ul>
-
-                <h3>Example</h3>
-                <p>Amplitude Sequence: +3, -2, +1, -4</p>
-                <p>Plaintext: "HELLO"</p>
-                <p>Ciphertext: "KCMHR"</p>
-
-                <h3>Decryption Process</h3>
-                <p>
-                  The decryption process is the reverse of encryption, using the
-                  same amplitude sequence to shift the letters back to their
-                  original positions.
-                </p>
-
-                <h3>Unique Features</h3>
-                <ul>
-                  <li>
-                    <strong>Dynamic and Repeating Pattern:</strong> The use of a
-                    repeating amplitude sequence adds complexity and ensures the
-                    same letter can be encoded differently depending on its
-                    position.
-                  </li>
-                  <li>
-                    <strong>Customizable Rules:</strong> The amplitude sequence
-                    can be customized or altered mid-message for added security.
-                  </li>
-                  <li>
-                    <strong>Positional Sensitivity:</strong> The cipher is
-                    sensitive to the position of each letter, creating a
-                    non-linear and dynamic encryption pattern.
-                  </li>
-                </ul>
-
-                <p>
-                  This cipher can be further expanded by incorporating multiple
-                  amplitude sequences, varying wrap-around rules, or even
-                  combining with other cipher techniques for enhanced security.
-                </p>
+          <div class="col-md-6 mb-3 mb-md-0">
+            <div class="mb-3">
+              <label for="plaintext" class="form-label">Plaintext</label>
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                id="plaintext"
+                placeholder="Enter text to encrypt"
+                required
+              />
+              <div class="invalid-feedback">
+                Please enter some text to encrypt.
               </div>
             </div>
+            <button class="col-5 btn btn-dark" onclick="encrypt()">
+              Encrypt
+            </button>
+          </div>
+          <div class="col-md-6 mt-3 mt-md-0">
+            <div class="mb-3">
+              <label for="ciphertext" class="form-label">Ciphertext</label>
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                id="ciphertext"
+                placeholder="Enter text to decrypt"
+                required
+              />
+              <div class="invalid-feedback">
+                Please enter some text to decrypt.
+              </div>
+            </div>
+            <button class="col-5 btn btn-dark" onclick="decrypt()">
+              Decrypt
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <h3>Output</h3>
+          <div
+            class="output-box d-flex justify-content-between align-items-center"
+          >
+            <div id="output" class="output-text">
+              Your result will appear here
+            </div>
+
+            <button
+              id="copyButton"
+              class="btn btn-outline-secondary bg-secondary text-white ms-3"
+              onclick="copyToClipboard()"
+            >
+              <i class="bi bi-copy me-1"></i>Copy
+            </button>
           </div>
         </div>
       </div>
-    </div>
+      <!-- btn btn-outline-primary -->
+      <!-- About Section -->
+      <div id="about-section" class="container">
+        <br />
+        <br />
+        <div class="container">
+          <h1 class="text-center">About AlphaWave Cipher</h1>
+          <p class="lead text-center">A Unique Dynamic Wave Pattern Cipher</p>
 
-    <!-- HTML Table Representation of the AlphaWave Cipher -->
-    <div id="pattern-section" class="container mt-4">
-      <br />
-      <br />
-      <div class="container">
-        <h1 class="text-center">AlphaWave Cipher Table</h1>
-        <p class="lead text-center">A Unique Dynamic Wave Pattern Cipher</p>
+          <div class="row mt-4">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h2>Concept</h2>
+                  <p>
+                    The AlphaWave Cipher is a substitution cipher that uses the
+                    positional properties of letters in the alphabet to create a
+                    dynamic wave pattern for encryption...
+                  </p>
 
-        <div class="row mt-4">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-body">
-                <div class="table-responsive mt-4">
-                  <table class="table table-bordered text-center">
-                    <thead class="table-dark">
-                      <tr>
-                        <th>Letters</th>
-                        <th>+3</th>
-                        <th>-2</th>
-                        <th>+1</th>
-                        <th>-4</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>A</td>
-                        <td>D</td>
-                        <td>Y</td>
-                        <td>B</td>
-                        <td>W</td>
-                      </tr>
-                      <tr>
-                        <td>B</td>
-                        <td>E</td>
-                        <td>Z</td>
-                        <td>C</td>
-                        <td>X</td>
-                      </tr>
-                      <tr>
-                        <td>C</td>
-                        <td>F</td>
-                        <td>A</td>
-                        <td>D</td>
-                        <td>Y</td>
-                      </tr>
-                      <tr>
-                        <td>D</td>
-                        <td>G</td>
-                        <td>B</td>
-                        <td>E</td>
-                        <td>Z</td>
-                      </tr>
-                      <tr>
-                        <td>E</td>
-                        <td>H</td>
-                        <td>C</td>
-                        <td>F</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>F</td>
-                        <td>I</td>
-                        <td>D</td>
-                        <td>G</td>
-                        <td>B</td>
-                      </tr>
-                      <tr>
-                        <td>G</td>
-                        <td>J</td>
-                        <td>E</td>
-                        <td>H</td>
-                        <td>C</td>
-                      </tr>
-                      <tr>
-                        <td>H</td>
-                        <td>K</td>
-                        <td>F</td>
-                        <td>I</td>
-                        <td>D</td>
-                      </tr>
-                      <tr>
-                        <td>I</td>
-                        <td>L</td>
-                        <td>G</td>
-                        <td>J</td>
-                        <td>E</td>
-                      </tr>
-                      <tr>
-                        <td>J</td>
-                        <td>M</td>
-                        <td>H</td>
-                        <td>K</td>
-                        <td>F</td>
-                      </tr>
-                      <tr>
-                        <td>K</td>
-                        <td>N</td>
-                        <td>I</td>
-                        <td>L</td>
-                        <td>G</td>
-                      </tr>
-                      <tr>
-                        <td>L</td>
-                        <td>O</td>
-                        <td>J</td>
-                        <td>M</td>
-                        <td>H</td>
-                      </tr>
-                      <tr>
-                        <td>M</td>
-                        <td>P</td>
-                        <td>K</td>
-                        <td>N</td>
-                        <td>I</td>
-                      </tr>
-                      <tr>
-                        <td>N</td>
-                        <td>Q</td>
-                        <td>L</td>
-                        <td>O</td>
-                        <td>J</td>
-                      </tr>
-                      <tr>
-                        <td>O</td>
-                        <td>R</td>
-                        <td>M</td>
-                        <td>P</td>
-                        <td>K</td>
-                      </tr>
-                      <tr>
-                        <td>P</td>
-                        <td>S</td>
-                        <td>N</td>
-                        <td>Q</td>
-                        <td>L</td>
-                      </tr>
-                      <tr>
-                        <td>Q</td>
-                        <td>T</td>
-                        <td>O</td>
-                        <td>R</td>
-                        <td>M</td>
-                      </tr>
-                      <tr>
-                        <td>R</td>
-                        <td>U</td>
-                        <td>P</td>
-                        <td>S</td>
-                        <td>N</td>
-                      </tr>
-                      <tr>
-                        <td>S</td>
-                        <td>V</td>
-                        <td>Q</td>
-                        <td>T</td>
-                        <td>O</td>
-                      </tr>
-                      <tr>
-                        <td>T</td>
-                        <td>W</td>
-                        <td>R</td>
-                        <td>U</td>
-                        <td>P</td>
-                      </tr>
-                      <tr>
-                        <td>U</td>
-                        <td>X</td>
-                        <td>S</td>
-                        <td>V</td>
-                        <td>Q</td>
-                      </tr>
-                      <tr>
-                        <td>V</td>
-                        <td>Y</td>
-                        <td>T</td>
-                        <td>W</td>
-                        <td>R</td>
-                      </tr>
-                      <tr>
-                        <td>W</td>
-                        <td>Z</td>
-                        <td>U</td>
-                        <td>X</td>
-                        <td>S</td>
-                      </tr>
-                      <tr>
-                        <td>X</td>
-                        <td>A</td>
-                        <td>V</td>
-                        <td>Y</td>
-                        <td>T</td>
-                      </tr>
-                      <tr>
-                        <td>Y</td>
-                        <td>B</td>
-                        <td>W</td>
-                        <td>Z</td>
-                        <td>U</td>
-                      </tr>
-                      <tr>
-                        <td>Z</td>
-                        <td>C</td>
-                        <td>X</td>
-                        <td>A</td>
-                        <td>V</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <h3>Encryption Process</h3>
+                  <ul>
+                    <li>
+                      <strong>Wave Amplitude Setup:</strong> The cipher begins
+                      with a predefined amplitude sequence, such as +3, -2, +1,
+                      -4, and repeats it for the length of the message...
+                    </li>
+                    <li>
+                      <strong>Letter Positioning:</strong> Each letter in the
+                      plaintext is assigned a number according to its position
+                      in the alphabet (A=1, B=2, C=3, ..., Z=26)...
+                    </li>
+                    <li>
+                      <strong>Shifting Process:</strong> The letter is shifted
+                      according to the wave amplitude corresponding to its
+                      position in the message...
+                    </li>
+                    <li>
+                      <strong>Dynamic Adjustment:</strong> After each letter is
+                      encrypted, the amplitude can be adjusted based on a rule,
+                      adding an additional layer of complexity...
+                    </li>
+                    <li>
+                      <strong>Repetition of Amplitude:</strong> The amplitude
+                      pattern repeats throughout the message, creating a
+                      wave-like effect that ensures no two identical letters are
+                      encrypted the same way...
+                    </li>
+                  </ul>
+
+                  <h3>Example</h3>
+                  <p>Amplitude Sequence: +3, -2, +1, -4</p>
+                  <p>Plaintext: "HELLO"</p>
+                  <p>Ciphertext: "KCMHR"</p>
+
+                  <h3>Decryption Process</h3>
+                  <p>
+                    The decryption process is the reverse of encryption, using
+                    the same amplitude sequence to shift the letters back to
+                    their original positions.
+                  </p>
+
+                  <h3>Unique Features</h3>
+                  <ul>
+                    <li>
+                      <strong>Dynamic and Repeating Pattern:</strong> The use of
+                      a repeating amplitude sequence adds complexity and ensures
+                      the same letter can be encoded differently depending on
+                      its position.
+                    </li>
+                    <li>
+                      <strong>Customizable Rules:</strong> The amplitude
+                      sequence can be customized or altered mid-message for
+                      added security.
+                    </li>
+                    <li>
+                      <strong>Positional Sensitivity:</strong> The cipher is
+                      sensitive to the position of each letter, creating a
+                      non-linear and dynamic encryption pattern.
+                    </li>
+                  </ul>
+
+                  <p>
+                    This cipher can be further expanded by incorporating
+                    multiple amplitude sequences, varying wrap-around rules, or
+                    even combining with other cipher techniques for enhanced
+                    security.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- End of Table -->
-    <!-- Animation -->
-    <div class="mt-5">
-      <marquee direction="rights"
-        ><h1>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</h1></marquee
-      >
-    </div>
-    <!-- Footer of Cipher -->
-    <footer class="footer mt-4 py-3 bg-dark text-light">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-6 text-center text-md-start">
-            <span>AlphaWave Cipher by Nicolas</span>
-          </div>
-          <div class="col-12 col-md-6 text-center text-md-end">
-            <span class="d-block d-md-inline">All rights reserved.</span>
-            <div
-              class="d-flex justify-content-center justify-content-md-end mt-2 mt-md-0"
-            >
-              <span class="me-2">
-                <a
-                  class="github"
-                  href="https://github.com/nicolassdev/alphawave-cipher"
-                  target="_blank"
-                >
-                  <i class="bi bi-github"></i>
-                </a>
-              </span>
-              <span>
-                <a
-                  class="github"
-                  href="https://gitlab.com/csi3093428/alphawave-cipher"
-                  target="_blank"
-                >
-                  <i class="bi bi-gitlab"></i>
-                </a>
-              </span>
+      <!-- End of Table -->
+
+      <!-- Footer of Cipher -->
+      <footer class="footer mt-4 py-3 bg-dark text-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-md-6 text-center text-md-start">
+              <span>AlphaWave Cipher by Nicolas</span>
+            </div>
+            <div class="col-12 col-md-6 text-center text-md-end">
+              <span class="d-block d-md-inline">All rights reserved.</span>
+              <div
+                class="d-flex justify-content-center justify-content-md-end mt-2 mt-md-0"
+              >
+                <span class="me-2">
+                  <a
+                    class="github"
+                    href="https://github.com/nicolassdev/alphawave-cipher"
+                    target="_blank"
+                  >
+                    <i class="bi bi-github"></i>
+                  </a>
+                </span>
+                <span>
+                  <a
+                    class="github"
+                    href="https://gitlab.com/csi3093428/alphawave-cipher"
+                    target="_blank"
+                  >
+                    <i class="bi bi-gitlab"></i>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="script.js"></script>
+    </div>
   </body>
 </html>

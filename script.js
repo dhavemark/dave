@@ -21,17 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (localStorage.getItem("nightMode") === "true") {
     body.classList.add("night-mode");
-    toggleButton.innerHTML = '<i class="bi bi-cloud-sun-fill"></i> Light  ';
+    toggleButton.innerHTML = '<i class="bi bi-cloud-sun-fill"></i>'; //Light
   }
 
   toggleButton.addEventListener("click", function () {
     body.classList.toggle("night-mode");
 
     if (body.classList.contains("night-mode")) {
-      toggleButton.innerHTML = '<i class="bi bi-cloud-sun-fill"></i> Light  ';
+      toggleButton.innerHTML = '<i class="bi bi-cloud-sun-fill"></i>'; //Light
       localStorage.setItem("nightMode", "true");
     } else {
-      toggleButton.innerHTML = '<i class="bi bi-moon-stars-fill"></i> Night  ';
+      toggleButton.innerHTML = '<i class="bi bi-moon-stars-fill"></i>'; //Dark
       localStorage.setItem("nightMode", "false");
     }
   });
@@ -117,7 +117,7 @@ function copyToClipboard() {
 
   // Change the button text and icon to show "Copied"
   const copyButton = document.getElementById("copyButton");
-  copyButton.innerHTML = '<i class="bi bi-check me-1"></i>Copied!';
+  copyButton.innerHTML = '<i class="bi bi-check me-1 "></i>Copied!';
 
   // Reset the button text and icon after a short delay (e.g., 2 seconds)
   setTimeout(() => {

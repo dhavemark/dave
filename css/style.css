@@ -6,12 +6,22 @@ body.light-mode {
 body.night-mode {
   background-color: #212529;
   color: #f8f9fa;
+  .output-box {
+    background-color: #f8f9fa;
+  }
+  .output-text {
+    color: #212529;
+  }
+  .btn-dark {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
 }
 
-.navbar-light {
+/* .navbar-light {
   background-color: #f8f9fa;
   box-shadow: 1px 5px 5px lightblue;
-}
+} */
 
 .night-mode .navbar {
   background-color: #343a40;
@@ -93,7 +103,8 @@ li {
 }
 
 .output-box {
-  background-color: #343a40;
+  background-color: #212529;
+  /* #343a40 */
   color: #ffffff;
   padding: 20px;
   border-radius: 5px;
